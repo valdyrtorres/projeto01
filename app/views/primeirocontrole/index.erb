@@ -1,0 +1,28 @@
+<h1> Exemplo Rails </h1>
+Vejamos a nossa primeira mensagem:
+<%= @mensagem %>
+<h1> Hora Certa </h1>
+<p> A hora certa: <%= @hora %> </p>
+<h1> Exemplo de Scriptlet - Codigo Ruby </h1>
+<% for contador in 1..3 %>
+   <p> Linha numero <%= contador %> </p>
+<% end %>
+
+<h1>Uma simples tabela </h1>
+   <table border=1>
+      <tr>
+      <% @tabela["cabecalho"].each do |dados_cabecalho| %>
+         <td>
+            <b><%= dados_cabecalho %> </b>
+         </td>
+      <% end %>
+      </tr>
+      <% @tabela["dados"].each do |linha| %>
+      <tr> 
+            <% linha.each do |coluna| %>
+            <td> 
+                 <%= coluna %>
+            </td>
+            <% end %>
+      </tr>
+      <% end %>

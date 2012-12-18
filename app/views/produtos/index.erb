@@ -1,0 +1,15 @@
+<h1>Listagem dos produtos</h1>
+<table border=1>
+   <tr>
+      <th>Descricao</th>
+      <th>Validade</th>
+      <th>Preco</th>
+   <tr>
+<% for produto in @produtos %>
+   <tr>
+      <td><%=h produto.descricao %></td>
+      <td><%=h produto.validade %></td>
+      <td><%=h produto.preco %></td>
+   </tr>
+<% end %>
+</table>
